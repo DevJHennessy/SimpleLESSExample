@@ -1,0 +1,112 @@
+//out: ../css/mainstyle.css, sourcemap: true, compress: true
+
+//Showing how you can make css more modular with multiple less files
+//yet putting them all together in one file in the end. The import statement
+//imports a less file with color variables.
+@import "colors";
+@import "mixins";
+
+
+
+//Font variables:
+@baseFontSize: 14px;
+@headingOneSize: 30px;
+@headingOneSmallerSize: 24px;
+@headingFont: Monoton;
+@mainFont: Chewy, curvsive;
+@headingTwoFont: Poiret One, cursive;
+
+
+
+/* Basics */
+html {
+  font-size: @baseFontSize;
+  font-family: @mainFont;
+  letter-spacing: 1.5px;
+}
+
+body {
+  background-color: @bg-color;
+
+}
+
+h1 {
+  font-size: @baseFontSize + 16;
+  color: @heading-color;
+  font-family: @headingFont;
+  font-weight: 100;
+}
+
+h2 {
+  font-size: @baseFontSize + 6px;
+  color: lighten(@heading-color, 10%);
+  text-align: center;
+  font-family: @headingTwoFont;
+}
+
+h3 {
+  font-size: @baseFontSize + 2px;
+
+}
+
+main
+{
+  h1
+  {
+    color: @second-heading-color;
+    font-size: @headingOneSmallerSize;
+  }
+}
+
+#container {
+  margin-top: 5px;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  .rounded-corners();
+  background: @bg2-color;
+  color: @baseFontColor;
+}
+
+footer {
+  text-align: center;
+}
+
+//Navigation:
+nav {
+  float:right;
+  font-weight: 200;
+  ul {
+    list-style-type: none;
+    li {
+      float: left;
+      margin: 2px;
+      a {
+        text-decoration: none;
+        color: @baseFontColor;
+        &:hover {
+          color: @hoverTextColor;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+// Forms:
+#contact-form
+{
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  padding: 5px;
+  .rounded-corners(10px);
+  border: black 1px solid;
+  background: @bgFormsColor;
+}
+
+#contact-form input[type=textbox], #contact-form textarea
+{
+  .rounded-corners(3px);
+}

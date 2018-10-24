@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LESS Sample Project</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="css/mainstyle.css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Monoton|Chewy|Poiret+One" rel="stylesheet" />
+
+  <!-- Scripts -->
+  <script>
+  less = {
+    env: "development"
+  };
+</script>
+  <script src="js/less.js-master/dist/less.js" type="text/javascript" data-env="development"></script>
+
+</head>
+
+<body>
+
+<!-- Showing nested rules in the LESS -->
+  <nav>
+    <ul>
+      <li><a href="#">Home</a> |</li>
+      <li><a href="#">Somewhere else</a></li>
+    </ul>
+  </nav>
+
+  <section id="container">
+    <header>
+      <h1>A sample project using Leaner Stylesheets (LESS).</h1>
+    </header>
+  </section>
+
+
+  <main id="container">
+    <h1>This shows how to use variables for nested rules!</h1>
+    <h2>Fill in the form.</h2>
+    <form id="contact-form">
+      First name:<br>
+      <input type="textbox" name="firstname"><br>
+      Last name:<br>
+      <input type="textbox" name="lastname">
+      <br />
+      <input type="radio" name="species" value="human" checked> Human<br>
+      <input type="radio" name="species" value="rabbit"> Rabbit<br>
+      <input type="radio" name="species" value="croc"> Croc
+    </main>
+
+    <footer>
+      <p>
+        This is a very silly site!
+      </p>
+    </footer>
+
+</html>
